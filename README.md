@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Código fonte doprojeto Calculadora do [Free Code Camp](https://www.freecodecamp.org/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Criar uma calculadora JavaScript
 
-## Available Scripts
+Objetivo: criar uma aplicação que funcione de modo semelhante ao que vemos em: https://javascript-calculator.freecodecamp.rocks/.
 
-In the project directory, you can run:
+Atenda às histórias de usuário abaixo e faça com que todos os testes passem. Use quaisquer bibliotecas ou APIs de que você precisar. Dê ao projeto o seu próprio estilo pessoal.
 
-### `npm start`
+Você pode usar qualquer mistura de HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux e JQuery para completar este projeto. Você deve usar um framework de front-end (como React por exemplo) porque essa seção trata de aprender frameworks de front-end. Tecnologias adicionais não listadas acima não são recomendadas e usá-las é por sua conta e risco. Estamos buscando apoiar outros frameworks de front-end, como Angular e Vue, mas eles não são atualmente suportados. Vamos aceitar e tentar corrigir todos os relatórios de problemas que usem o conjunto de tecnologias sugeridas para esse projeto. Boa programação para você!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+História de usuário nº 1: minha calculadora deve conter um elemento clicável contendo um = (sinal de igualdade) com o id="equals" correspondente.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+História de usuário nº 2: minha calculadora deve conter 10 elementos clicáveis contendo um número cada, de 0 até 9, com os ids correspondentes a seguir: id="zero", id="one", id="two", id="three", id="four", id="five", id="six", id="seven", id="eight" e id="nine".
 
-### `npm test`
+História de usuário nº 3: minha calculadora deve conter 4 elementos clicáveis, cada um contendo uma das 4 operações matemáticas primárias com os ids correspondentes a seguir: id="add", id="subtract", id="multiply", id="divide".
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+História de usuário nº 4: minha calculadora deve conter um elemento clicável contendo o símbolo . (ponto decimal) com o id="decimal" correspondente.
 
-### `npm run build`
+História de usuário nº 5: minha calculadora deve conter um elemento clicável com um id="clear".
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+História de usuário nº 6: minha calculadora deve conter um elemento para exibir valores com o id="display" correspondente.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+História de usuário nº 7: a qualquer momento, pressionar o botão clear limpará os valores de entrada e saída, e retornará a calculadora ao seu estado inicial. "0" deve ser mostrado no elemento com o id display.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+História de usuário nº 8: enquanto eu coloco números de entrada, eu devo ser capaz de ver a minha entrada no elemento com id display.
 
-### `npm run eject`
+História de usuário nº 9: em qualquer ordem, eu devo ser capaz de adicionar, subtrair, multiplicar e dividir uma cadeia de números de qualquer tamanho, e quando eu pressionar =, o resultado correto deve ser mostrado no elemento com id display.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+História de usuário nº 10: ao inserir números, minha calculadora não deve permitir um número de começar com múltiplos zeros.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+História de usuário nº 11: quando o elemento decimal for clicado, um . deve ser adicionado ao valor atualmente exibido. Dois . em um número não devem ser aceitos.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+História de usuário nº 12: eu devo ser capaz de executar qualquer operação (+, -, *, /) em números contendo pontos decimais.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+História de usuário nº 13: Se 2 ou mais operadores forem inseridos consecutivamente, a operação executada deve ser o último operador inserido, excluindo o símbolo de negação (-). Por exemplo, se 5 + * 7 = for inserido, o resultado deve ser 35 (ou seja, 5 * 7); se 5 * - 5 = for inserido, o resultado deve ser -25 (ou seja, 5 * (-5)).
 
-## Learn More
+História de usuário nº 14: pressionar um operador imediatamente após um = deve iniciar um novo cálculo que opera no resultado da avaliação anterior.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+História de usuário nº 15: minha calculadora deve ter diversas casas decimais de precisão ao se tratar de arredondamento (note que não há um padrão exato, mas você deve ser capaz de lidar com cálculos como 2 / 7 com precisão razoável de pelo menos 4 casas decimais).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Nota para a lógica da calculadora: deve-se notar que há duas principais escolas de pensamento na lógica de entrada da calculadora: a lógica da execução imediata e a lógica da fórmula. Nosso exemplo utiliza a lógica da fórmula e observa a ordem de precedência de operação. A lógica de execução imediata não faz isso. Qualquer uma é aceitável, mas observe que, dependendo de qual você escolher, sua calculadora pode alcançar diferentes resultados do que os nossos para certas equações (veja abaixo um exemplo). Desde que sua matemática possa ser verificada por outra calculadora em produção, não considere isso um bug.
 
-### Code Splitting
+EXEMPLO: 3 + 5 x 6 - 2 / 4 =
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Lógica de execução imediata: 11.5
+Lógica de fórmula/expressão: 32.5
