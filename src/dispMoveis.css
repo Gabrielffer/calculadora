@@ -1,0 +1,24 @@
+
+@media screen and (min-width: 319px) and (max-width: 426px){
+
+    #calculadora{
+        width: 95%;
+    }
+
+    #historico{
+        width: 90%;
+    }
+
+}
+
+@media screen and (width: 768px){
+
+    #calculadora{
+        width: 70%;
+    }
+
+    #historico{
+        width: 65%;
+    }
+
+}

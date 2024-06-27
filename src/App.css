@@ -1,0 +1,38 @@
+
+body{
+  padding-bottom: 20px;
+}
+
+#calculadora{
+  width: 40%;
+  margin: 50px auto;
+}
+
+#historico{
+  width: 30%;
+  padding: 10px;
+}
+
+#display{
+  padding: 10px;
+  text-align: right;
+}
+
+#botoes{
+  width: 100% !important;
+  display: flex;
+  padding: 20px 0 20px 0;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+#clear{
+  width: 30.5%;
+}
+
+button{
+  width: 15%;
+  height: 80px;
+  margin: 3px !important;
+}
