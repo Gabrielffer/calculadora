@@ -1,4 +1,4 @@
-# Código fonte do projeto Calculadora do [Free Code Camp](https://www.freecodecamp.org/)
+# Projeto Calculadora do [Free Code Camp](https://www.freecodecamp.org/)
 
 Criar uma calculadora JavaScript
 
